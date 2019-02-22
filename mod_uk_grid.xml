@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <extension type="module" version="3.6" method="upgrade" client="site">
     <name>UIkit 3 Grid</name>
-	<author>Aleksey A. Morozov (AlekVolsk)</author>
-	<copyright>(C) 2018 Aleksey A. Morozov. All rights reserved.</copyright>
-	<license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
-	<version>1.1.0</version>
-	<creationDate>May 2018</creationDate>
+    <author>Aleksey A. Morozov (AlekVolsk)</author>
+    <copyright>(C) 2019 Aleksey A. Morozov. All rights reserved.</copyright>
+    <license>GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt</license>
+    <version>1.2.0</version>
+    <creationDate>February 2019</creationDate>
     <description><![CDATA[MOD_UK_GRID_XML_DESCRIPTION]]></description>
     <files>
         <filename module="mod_uk_grid">mod_uk_grid.php</filename>
@@ -20,20 +20,20 @@
     </languages>
     <config>
         <fields name="params">
-            
+
             <fieldset name="basic">
                 <field name="grid_class" type="text" label="MOD_UK_GRID_CLASS" class="input-xlasrge" />
                 <field name="item_class" type="text" label="MOD_UK_GRID_ITEM_CLASS" class="input-xlasrge" />
-                <field name="margin_class" type="text" label="MOD_UK_GRID_MARGIN_CLASS"  class="input-xlarge" />
-                <field name="first_column_class" type="text" label="MOD_UK_GRID_FIRST_COLUMN_CLASS"  class="input-xlarge" />
+                <field name="margin_class" type="text" label="MOD_UK_GRID_MARGIN_CLASS" class="input-xlarge" />
+                <field name="first_column_class" type="text" label="MOD_UK_GRID_FIRST_COLUMN_CLASS" class="input-xlarge" />
                 <field name="height_match" type="radio" label="MOD_UK_GRID_HEIGHT_MATCH" default="0" class="btn-group">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="height_match_class" type="text" label="MOD_UK_GRID_HEIGHT_MATCH_CLASS"  class="input-xlarge" showon="height_match!:0" />
-                
+                <field name="height_match_class" type="text" label="MOD_UK_GRID_HEIGHT_MATCH_CLASS" class="input-xlarge" showon="height_match!:0" />
+
                 <field type="spacer" name="spacer" hr="true" />
-                
+
                 <field name="grid" type="list" label="MOD_UK_GRID_GRID" default="uk-grid">
                     <option value="">MOD_UK_GRID_GRID_NONE</option>
                     <option value="uk-grid">MOD_UK_GRID_GRID_DEFAULT</option>
@@ -54,14 +54,14 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                
+
                 <field type="spacer" name="spacer2" hr="true" />
-                
+
                 <field name="cols" type="radio" label="MOD_UK_GRID_COLS" default="1" class="btn-group">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="cols_all" type="radio" label="MOD_UK_GRID_COLS_ALL"  class="btn-group" showon="cols!:0">
+                <field name="cols_all" type="radio" label="MOD_UK_GRID_COLS_ALL" class="btn-group" showon="cols!:0">
                     <option value="">MOD_UK_GRID_COL_UNUSED</option>
                     <option value="uk-child-width-auto">MOD_UK_GRID_COL_0</option>
                     <option value="uk-child-width-1-1">MOD_UK_GRID_COL_1</option>
@@ -71,7 +71,7 @@
                     <option value="uk-child-width-1-5">MOD_UK_GRID_COL_5</option>
                     <option value="uk-child-width-1-6">MOD_UK_GRID_COL_6</option>
                 </field>
-                <field name="cols_s" type="radio" label="MOD_UK_GRID_COLS_S"  class="btn-group" showon="cols!:0">
+                <field name="cols_s" type="radio" label="MOD_UK_GRID_COLS_S" class="btn-group" showon="cols!:0">
                     <option value="">MOD_UK_GRID_COL_UNUSED</option>
                     <option value="uk-child-width-auto@s">MOD_UK_GRID_COL_0</option>
                     <option value="uk-child-width-1-1@s">MOD_UK_GRID_COL_1</option>
@@ -81,7 +81,7 @@
                     <option value="uk-child-width-1-5@s">MOD_UK_GRID_COL_5</option>
                     <option value="uk-child-width-1-6@s">MOD_UK_GRID_COL_6</option>
                 </field>
-                <field name="cols_m" type="radio" label="MOD_UK_GRID_COLS_M"  class="btn-group" showon="cols!:0">
+                <field name="cols_m" type="radio" label="MOD_UK_GRID_COLS_M" class="btn-group" showon="cols!:0">
                     <option value="">MOD_UK_GRID_COL_UNUSED</option>
                     <option value="uk-child-width-auto@m">MOD_UK_GRID_COL_0</option>
                     <option value="uk-child-width-1-1@m">MOD_UK_GRID_COL_1</option>
@@ -91,7 +91,7 @@
                     <option value="uk-child-width-1-5@m">MOD_UK_GRID_COL_5</option>
                     <option value="uk-child-width-1-6@m">MOD_UK_GRID_COL_6</option>
                 </field>
-                <field name="cols_l" type="radio" label="MOD_UK_GRID_COLS_L"  class="btn-group" showon="cols!:0">
+                <field name="cols_l" type="radio" label="MOD_UK_GRID_COLS_L" class="btn-group" showon="cols!:0">
                     <option value="">MOD_UK_GRID_COL_UNUSED</option>
                     <option value="uk-child-width-auto@l">MOD_UK_GRID_COL_0</option>
                     <option value="uk-child-width-1-1@l">MOD_UK_GRID_COL_1</option>
@@ -101,7 +101,7 @@
                     <option value="uk-child-width-1-5@l">MOD_UK_GRID_COL_5</option>
                     <option value="uk-child-width-1-6@l">MOD_UK_GRID_COL_6</option>
                 </field>
-                <field name="cols_xl" type="radio" label="MOD_UK_GRID_COLS_XL"  class="btn-group" showon="cols!:0">
+                <field name="cols_xl" type="radio" label="MOD_UK_GRID_COLS_XL" class="btn-group" showon="cols!:0">
                     <option value="">MOD_UK_GRID_COL_UNUSED</option>
                     <option value="uk-child-width-auto@xl">MOD_UK_GRID_COL_0</option>
                     <option value="uk-child-width-1-1@xl">MOD_UK_GRID_COL_1</option>
@@ -112,11 +112,11 @@
                     <option value="uk-child-width-1-6@xl">MOD_UK_GRID_COL_6</option>
                 </field>
             </fieldset>
-            
+
             <fieldset name="els">
                 <field name="items" type="subform" label="COM_MODULES_ELS_FIELDSET_LABEL" formsource="/modules/mod_uk_grid/forms/form.xml" multiple="true" min="0" layout="joomla.form.field.subform.repeatable" />
             </fieldset>
-            
+
             <fieldset name="advanced">
                 <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
                 <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">

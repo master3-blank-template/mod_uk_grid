@@ -1,18 +1,19 @@
 <?php defined('_JEXEC') or die;
 /*
  * @package     mod_uk_grid
- * @copyright   Copyright (C) 2018 Aleksey A. Morozov (AlekVolsk). All rights reserved.
+ * @copyright   Copyright (C) 2019 Aleksey A. Morozov (AlekVolsk). All rights reserved.
  * @license     GNU General Public License version 3 or later; see http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
+use Joomla\CMS\Helper\ModuleHelper;
+
 $vars = [
-    'grid_class', 'item_class', 'margin_class', 'first_column_class', 'height_match', 'height_match_class', 
+    'grid_class', 'item_class', 'margin_class', 'first_column_class', 'height_match', 'height_match_class',
     'grid', 'grid_divider', 'grid_center', 'cols', 'cols_all', 'cols_s', 'cols_m', 'cols_l', 'cols_xl', 'masonry',
     'items'
 ];
 
-foreach ($vars as $var)
-{
+foreach ($vars as $var) {
     $$var = $params->get($var);
 }
 
@@ -29,14 +30,12 @@ $hm_param = '';
 if ((int)$height_match && $height_match_class) $hm_param = ' uk-height-match="target:' . $height_match_class . '"';
 
 $classes = [];
-if ($grid != '')
-{
+if ($grid != '') {
     $classes[] = $grid;
     if ((int)$grid_divider) $classes[] = 'uk-grid-divider';
     if ((int)$grid_center) $classes[] = 'uk-flex-center';
 }
-if ((int)$cols)
-{
+if ((int)$cols) {
     $classes[] = $cols_all;
     $classes[] = $cols_s;
     $classes[] = $cols_m;
@@ -46,4 +45,6 @@ if ((int)$cols)
 if ((int)$height_match && !$height_match_class) $classes[] = 'uk-grid-match';
 $classes = $classes ? ' ' . implode(' ', $classes) : '';
 
-require(JModuleHelper::getLayoutPath('mod_uk_grid', $params->get('layout', 'default')));
+if ($items) {
+    require(ModuleHelper::getLayoutPath('mod_uk_grid', $params->get('layout', 'default')));
+}
